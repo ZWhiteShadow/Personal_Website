@@ -1,29 +1,37 @@
-var myObj;
-
 $(document).ready(function () {
     $(".normal").hover(
         function () {
             $(this).toggleClass("lg");
         },
     );
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            myObj = JSON.parse(this.responseText);
-            for (x = 0; x < myObj.length; x++) {
 
-                $("#repo").append("<a href=" + myObj[x].html_url + " target=/'_blank/' >" +
-                    myObj[x].name + "</a>" + " - " + myObj[x].description + "<br>");
+    var starred = "",
+        aj1 = $.get("https://api.github.com/users/zwhiteshadow/repos"),
+        aj2 = $.get("https://api.github.com/users/ZWhiteShadow/starred");
 
-                $("#repo2").append("&nbsp&nbsp&nbsp&nbsp&nbsp<a href=" + myObj[x].html_url + " target=/'_blank/' >" +
-                myObj[x].name + "</a><br>");
+    $.when(aj1, aj2).done(function (repos, favRepos) {
+
+        for (reposLoop = 0; reposLoop < repos[0].length; reposLoop++) {
+            for (favLoop = 0; favLoop < favRepos[0].length; favLoop++) {
+                if (repos[0][reposLoop].name == favRepos[0][favLoop].name) {
+                     starred = "★"
+                     break;
+                }
+                else {
+                    starred = "&nbsp"
+                }
             }
-        };
+            $("#repo").append(starred + "<a href=" + repos[0][reposLoop].html_url + " target=/'_blank/' >" +
+                repos[0][reposLoop].name + "</a>" + " - " + repos[0][reposLoop].description + "<br>");
 
-    };
-    xhttp.open("GET", "https://api.github.com/users/zwhiteshadow/repos", true);
-    xhttp.send();
+            $("#repo2").append("&nbsp&nbsp&nbsp&nbsp" + starred +"<a href=" + repos[0][reposLoop].html_url + " target=/'_blank/' >" +
+                repos[0][reposLoop].name + "</a><br>");
+        }
+    });
+
 });
+
+
 
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
