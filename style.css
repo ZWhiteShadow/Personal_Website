@@ -1,0 +1,256 @@
+.me {
+  transform: rotate(90deg);
+  margin-top: 400px;
+  max-width: 1250px;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+h3 {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.header {
+  font-size: 3em;
+}
+
+.normal {
+  width: 75px;
+}
+
+.lg {
+  width: 100px;
+}
+
+p {
+  margin: 0px;
+  font-size: 1em;
+  font-family: 'Righteous', cursive;
+}
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.footer {
+  margin-bottom: -175px;
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 175px;
+  border: black solid 3px;
+  font-size: 16px;
+  background-color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Prompt', sans-serif;
+}
+
+.small {
+  width: 50px;
+}
+
+/* visited link */
+a:visited {
+  color: teal;
+}
+
+a:link {
+  color: blue;
+}
+
+a:hover {
+  color: brown;
+}
+
+
+br {
+  line-height: 10px;
+}
+
+/* https://freefrontend.com/css-text-effects/ */
+
+
+.deconstructed {
+  position: relative;
+  margin: auto;
+  height: 1.1em;
+  color: transparent;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: .8em;
+}
+
+.deconstructed>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  pointer-events: none;
+}
+
+.deconstructed>div:nth-child(1) {
+  -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+  mask-image: linear-gradient(black 25%, transparent 25%);
+  animation: deconstructed1 5s infinite;
+}
+
+.deconstructed>div:nth-child(2) {
+  -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  animation: deconstructed2 5s infinite;
+}
+
+.deconstructed>div:nth-child(3) {
+  -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  animation: deconstructed3 5s infinite;
+}
+
+.deconstructed>div:nth-child(4) {
+  -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+  mask-image: linear-gradient(transparent 75%, black 75%);
+  animation: deconstructed4 5s infinite;
+}
+
+@keyframes deconstructed1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  26% {
+    transform: translateX(0%);
+  }
+
+  83% {
+    transform: translateX(-0.1%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes deconstructed2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  24% {
+    transform: translateX(0.5%);
+  }
+
+  82% {
+    transform: translateX(-0.2%);
+  }
+
+  100% {
+    transform: translateX(-125%);
+  }
+}
+
+@keyframes deconstructed3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  22% {
+    transform: translateX(0%);
+  }
+
+  81% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-130%);
+  }
+}
+
+@keyframes deconstructed4 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  20% {
+    transform: translateX(0%);
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-135%);
+  }
+}
+
+.threeD {
+  margin-left: 117px;
+  color: black;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  font-family: 'Anton', sans-serif;
+  letter-spacing: .1em;
+  transition: 0.3s;
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    5px 13px 15px black;
+}
+
+.threeD:hover {
+  transition: 0.3s;
+  transform: scale(1.1)translate(-50%, -50%);
+  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+
+/* https://stackoverflow.com/questions/43371912/how-to-make-an-html-css-js-color-changing-background-like-kahoot-it-has */
+
+@keyframes bgcolor {
+  0% {
+    background-color: #003399
+  }
+  20% {
+    background-color: #0066cc
+  }
+  40% {
+    background-color: #00ccff
+  }
+  60% {
+    background-color: #66ffcc
+  }
+  80% {
+    background-color: #66ff99
+  }
+  100% {
+    background-color: #00cc00
+  }
+}
+
+.top,
+.footer {
+  border: 3px black solid;
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
