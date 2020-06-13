@@ -13,10 +13,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
+        </script>
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Prompt|Righteous&display=swap" rel="stylesheet">
 </head>
@@ -24,7 +24,7 @@
 <body>
 
     <!-- https://www.w3schools.com/w3css/w3css_sidebar.asp Sidebar -->
-    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <div class="w3-sidebar w3-bar-block w3-border-right extra" style="display:none" id="mySidebar">
         <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
         <h5>&nbsp&nbspGithub Repositories:</h5>
         <p id="repo2"></p>
@@ -32,7 +32,7 @@
 
     <!-- Page Content -->
     <div class="w3-teal">
-        <button class="w3-button w3-blue w3-xlarge button"  onclick="w3_open()">☰</button>
+        <button class="w3-button w3-blue w3-xlarge button" onclick="w3_open()">☰</button>
     </div>
 
     <!--https://www.w3schools.com/bootstrap/-->
@@ -47,49 +47,64 @@
             </div>
             <p class="text-center header">Aspiring Full Stack Depeloper</p>
         </div>
-
+        </br></br>
         <!--https://getbootstrap.com/docs/4.0/utilities/sizing/-->
-        <div class="container me">
-            <div class="col-8"><img class="img-fluid" src="images\me.jpg" alt="Wade Helquist"></div>
+
+        <div class="me">
+            <div class="col-8 center"><img class="img-fluid" src="images\me.jpg" alt="Wade Helquist"></div>
         </div>
     </div>
 
     <div class="container info">
         <div class="row">
             <div class="col-sm-4 ">
-                <h3 class="threeD">Tech-related skills:</h3>
+                <h3 class="threeD heading1">Tech-related skills:</h3>
             </div>
             <div class="col-sm-4 ">
-                <h3 class="threeD">Social Medial Links:</h3>
+                <h3 class="threeD heading2">Social Medial Links:</h3>
             </div>
             <div class="col-sm-4 ">
-                <h3 class="threeD">My Github Repositories:</h3>
+                <h3 class="threeD heading3">My Github Repositories:</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <br>
-                <p>HTML, CSS, JavaScript, Java,</p>
-                <p>and Terminal and Source Control.</p>
-                <br>
-                <p>Flexbox, Bootstrap, and DOM.</p>
-                <br>
-                <p>jQuery, AJAX, SQL, and NoSQL</p>
-                <br>
-                <p><b>Most Skilled at JavaScript</b></p>
-                <br>
+            <div class="col-sm-6">
+                <p><strong><u>SOFT SKILLS</u></strong></p>
+                <p>Empathy, Active listener, Patient, Self-accountable, Team player,</p>
+                <p>Good at deadlines, Time management, Honest, and Good work ethic</p>
+                <p>&nbsp;</p>
+                <p><strong><u>TECHNICAL SKILLS</u></strong></p>
+                <ul>
+                    <li>BEST at JavaSCript, CSS, and HTML and associated tech.</li>
+                    <li>Hands-on experience with website code design</li>
+                    <li>Development tools: Visual Studio, SpringToolSuite4, MYSQL Workbench, and Eclipse</li>
+                    <li>Substantial personal software engineering experience</li>
+                    <li>Training in multiple computer languages including, Bootstrap, jQuery, React, Java, and MySQL</li>
+                    <li>Understanding of Agile Methodologies and SCRUM</li>
+                    <li>Working personal projects on GitHub</li>
+                    <li>Computer software knowledge such as Microsoft Operating System, and MS Office</li>
+                    <li>Experienced in Excel and data manipulation</li>
+                </ul>
+                <div><strong>WORK PROJECT (<a href="https://github.com/ZWhiteShadow/Enrollment-Metric-Tracker">Enrollment Metric Tracker</a>):</strong></div>
+                <div>Using excel software built a personal project for my team manager that keeps track of</div>
+                <div>metrics and then calculates daily and weekly goals (using personalized math equations,</div>
+                <div>conditional formatting, and formulas) based on company expectations. Later upper</div>
+                <div>management took note, praised my work, and decided to incorporate it on broader scale</div>
+                <div>throughout the organization.</div>
             </div>
 
-            <div class="col-sm-4">
-                <br>
-                <a href="https://github.com/ZWhiteShadow" target="_blank"><img class="img-fluid normal"
-                        src="images\github.png" alt="github"></a>
-                <a href="https://www.linkedin.com/in/wade-helquist/" target="_blank"><img class="img-fluid normal"
-                        src="images\linkedin.png" alt="linkedin"></a>
-                <a href="https://www.facebook.com/wadeut" target="_blank"><img class="img-fluid normal"
-                        src="images\facebook.png" alt="facebook"></a>
-                <br>
-                <br>
+            <div class="col-sm-2">
+                <div class="center">
+                    <br>
+                    <a href="https://github.com/ZWhiteShadow" target="_blank"><img class="img-fluid normal"
+                            src="images\github.png" alt="github"></a></br></br></br>
+                    <a href="https://www.linkedin.com/in/wade-helquist/" target="_blank"><img class="img-fluid normal"
+                            src="images\linkedin.png" alt="linkedin"></a></br></br></br>
+                    <a href="https://www.facebook.com/wadeut" target="_blank"><img class="img-fluid normal"
+                            src="images\facebook.png" alt="facebook"></a></br></br></br>
+                    <br>
+                    <br>
+                </div>
             </div>
 
             <div class="col-sm-4">

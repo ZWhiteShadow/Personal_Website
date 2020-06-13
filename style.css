@@ -1,7 +1,19 @@
-.me {
-  transform: rotate(90deg);
-  margin-top: 400px;
-  max-width: 1250px;
+.heading1{
+margin-left:200px
+}
+.heading2{
+  margin-left:175px
+}
+.heading3{
+  margin-left:150px
+}
+
+.extra {
+  width: 250px;
+}
+.center {
+  width:50%;
+  margin:10px auto
 }
 
 h1 {
@@ -18,11 +30,11 @@ h3 {
 }
 
 .normal {
-  width: 75px;
+  width: 100px;
 }
 
 .lg {
-  width: 100px;
+  width: 150px;
 }
 
 p {
@@ -203,7 +215,6 @@ br {
 }
 
 .threeD {
-  margin-left: 117px;
   color: black;
   white-space: nowrap;
   transform: translate(-50%, -50%);
